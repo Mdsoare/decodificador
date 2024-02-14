@@ -29,7 +29,15 @@ Com base no [Figma](https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Chal
 
 ## Publicar solução:
 
-- A solução deve ser disponibilizada no **GitHub Pages**
+#### A solução deve ser disponibilizada através do link gerado no **GitHub Pages**:
+- O repositório deve ser **Public**;
+- No repositório do projeto clique em **Settings**;
+- Em seguida, no menu lateral esquerdo, vá em **Pages**;
+- No lado direito vá em **Branch** e ajuste a branch para a que deseja publicar, no meu caso **Main** e ao lado altere **/root** para **/Docs*** e clique em **Save**;
+- Aguarde a página ser gerada após a validação do próprio GitHub;
+- Se tudo estiver correto, ao final, logo abaixo do **GitHub Pages** será disponibilizado o link;
+- Agora é só clicar em **Visit Site** para ver sua página publicada;
+- Pronto! Vá até o site do [Challenge](https://lp.alura.com.br/alura-latam-entrega-challenge-one-portugues) e preencha o formulário.
 
 ## Referencias:
 
