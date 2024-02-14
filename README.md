@@ -1,4 +1,4 @@
-# Challenge Decodificador de textos
+# Challenge Decodificador de Textos
 
 Com base no [Figma](https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?type=design&node-id=0-1&mode=design&t=B6ZgXYblW4880u2K-0), desenvolver uma aplicação web com os seguintes requisitos:
 
@@ -26,6 +26,10 @@ Com base no [Figma](https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Chal
 - Criei as funções necessárias para criptografar e desencriptar;
 - Criei uma função para limpar a área de saída e exebir o texto e o botão de copiar;
 - Criei a função de copiar o texto;
+
+## Publicar solução:
+
+- A solução deve ser disponibilizada no **GitHub Pages**
 
 ## Referencias:
 
