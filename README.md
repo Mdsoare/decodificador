@@ -33,7 +33,7 @@ Com base no [Figma](https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Chal
 - O repositório deve ser **Public**;
 - No repositório do projeto clique em **Settings**;
 - Em seguida, no menu lateral esquerdo, vá em **Pages**;
-- No lado direito vá em **Branch** e ajuste a branch para a que deseja publicar, no meu caso **Main** e ao lado altere **/root** para **/Docs*** e clique em **Save**;
+- No lado direito vá em **Branch** e ajuste a branch para a que deseja publicar, no meu caso **Main**, opcionalmente altere de **/root** para **/docs** e clique em **Save**;
 - Aguarde a página ser gerada após a validação do próprio GitHub;
 - Se tudo estiver correto, ao final, logo abaixo do **GitHub Pages** será disponibilizado o link;
 - Agora é só clicar em [**Visit Site**](https://mdsoare.github.io/decodificador/) para ver a página publicada;
