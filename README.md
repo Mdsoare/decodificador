@@ -1,4 +1,7 @@
-# Challenge Decodificador de Textos
+# Challenge - Decodificador de Textos 
+
+<img src=./assets/img/logo.svg alt="Logotipo da Alura" title="Logo da Alura">
+<img src=./assets/img/logo-one.webp alt="Logotipo da ONE" title="Logo da ONE">
 
 <br>
 
