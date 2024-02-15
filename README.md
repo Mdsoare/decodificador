@@ -41,7 +41,7 @@ Com base no [Figma](https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Chal
 
 ## Referencias:
 
-- [Live da formação](https://www.youtube.com/watch?v=XlfNkUeHYgE);
+- [Live ONE T6](https://www.youtube.com/watch?v=XlfNkUeHYgE);
 - [W3schools](https://www.w3schools.com/);
 - [MDN](https://developer.mozilla.org/pt-BR/);
 - [Alura - Artigos Front-End](https://www.alura.com.br/artigos/como-colocar-projeto-no-ar-com-github-pages).
