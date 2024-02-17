@@ -109,12 +109,65 @@ button:hover {
     padding-top: 2rem;
 }
 
-.rodape {
-    padding: 3.5rem;
-    color: var(--cor-texto-entrada);
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 200;
+.credito {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem 0;
+    color: var(--cor-mensagem);
+    background-color: var(--cor-botao-secundaria);
+}
+
+.credito-mensagem {
+    display: flex;
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
+}
+
+.credito-mensagem>small {
+    font-size: 1.1rem;
+    display: inline;
+    white-space: nowrap;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 auto;
+}
+
+.redes-sociais-links {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.redes-sociais-links img {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.redes-sociais-links img:hover {
+    transform: scale(1.4);
+}
+
+.redes-sociais-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style-type: none;
+}
+
+.credito-mensagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media (max-width: 1200px) {
@@ -171,10 +224,5 @@ button:hover {
 
     .btn-copiar {
         width: 12rem;
-    }
-
-    .rodape {
-        padding: 2rem;
-        font-size: 1rem;
     }
 }
