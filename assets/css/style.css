@@ -21,6 +21,11 @@ body {
 .logotipo {
     margin-left: 2rem;
     padding-top: 2.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.logotipo:hover {
+    transform: scale(1.6);
 }
 
 main {
@@ -64,6 +69,7 @@ button {
 button:hover {
     background-color: lawngreen;
     color: var(--cor-texto-saida);
+    transform: scale(1.1);
 }
 
 .btn-criptografar {
