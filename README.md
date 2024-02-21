@@ -45,7 +45,7 @@ Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto
 
 ### No **index.html**:
 
-- Incluí um tempo de 60 segundos para a página ser atualizada automaticamente; 
+- Incluí um tempo de 5 minutos para a página ser atualizada automaticamente; 
 - A logo da Alura no **header**;
 - Incluí uma **âncora** na logo para o site da Alura;
 - Uma área de texto para input;
@@ -54,7 +54,7 @@ Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto
 - uma área de saída, inicialmente com uma imagem de fundo seguda de uma mensagem de texto;
 - Após clicar em um dos botões, será exibida na área de saída a mensagem cifrada/decodificada, a depender do input feito pelo usuário, e o botão de **copiar** fica disponível;
 - **restrições** : texto a ser inserido deve conter apenas **letras minúsculas** e **sem acentos** ou **caracteres especiais**, mas deixei ser inserido o **"ç"**.
--  Incluí um rodapé.
+-  Incluí um rodapé, com os links do GitHub e LinkedIn.
 
 ### No **style.css**:
 
