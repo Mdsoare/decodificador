@@ -21,7 +21,6 @@ body {
 .logotipo {
     margin-left: 2rem;
     padding-top: 2.5rem;
-    transition: all 0.2s ease-in-out;
 }
 
 .logotipo:hover {
