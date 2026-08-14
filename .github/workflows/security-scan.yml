@@ -1,0 +1,41 @@
+name: DevSecOps Security Scan sast and sca
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  sast-codeql:
+    name: SAST (CodeQL Analysis)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: CodeQL Initialization
+        uses: github/codeql-action/init@v3
+        with:
+          languages: 'javascript-typescript'
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+
+  sca-osv:
+    name: SCA (OSV-Scanner)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run OSV-Scanner
+        uses: google/osv-scanner-action@v1.11.0
+        with:
+          scan-args: '--recursive ./'
