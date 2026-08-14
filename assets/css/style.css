@@ -1,233 +1,254 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
 
 :root {
-    --cor-fundo: #E5E5E5;
-    --cor-mensagem: #808080;
-    --cor-texto-entrada: #0A3871;
-    --cor-texto-saida: #FFFFFF;
-    --cor-botao-primaria: #0A3871;
-    --cor-botao-secundaria: #D8DFE8;
+  --cor-fundo: #f3f5fc;
+  --cor-mensagem: #495057;
+  --cor-texto-entrada: #0a3871;
+  --cor-texto-saida: #ffffff;
+  --cor-botao-primaria: #0a3871;
+  --cor-botao-secundaria: #d8dfe8;
+  --cor-botao-hover: #072b57;
 
-    --fonte-primaria: 'Montserrat', sans-serif;
-    --fonte-secundaria: 'Krona One', sans-serif;
+  --fonte-primaria: "Montserrat", sans-serif;
+  --fonte-secundaria: "Krona One", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--cor-fundo);
-    font-family: var(--fonte-primaria);
-    line-height: 150%;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-primaria);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  padding: 2rem 0 0 2rem;
 }
 
 .logotipo {
-    margin-left: 2rem;
-    padding-top: 2.5rem;
+  width: 3rem;
+  transition: transform 0.2s ease;
 }
 
 .logotipo:hover {
-    transform: scale(1.6);
+  transform: scale(1.1);
 }
 
+/* Layout Principal */
 main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 7rem;
-    margin: 3rem 9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 90%;
+  margin: 2rem auto;
+  flex: 1;
 }
 
-.alerta,
-.mensagem {
-    color: var(--cor-mensagem);
+/* Seção de Entrada */
+.sessao-entrada {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1.5rem;
 }
 
-textarea {
-    border: none;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto-entrada);
-    font-family: var(--fonte-secundaria);
-    font-size: 0.8rem;
+.inputText {
+  width: 100%;
+  height: 60vh;
+  border: none;
+  background-color: transparent;
+  color: var(--cor-texto-entrada);
+  font-family: var(--fonte-secundaria);
+  font-size: 1.25rem;
+  resize: none;
+}
+
+.inputText:focus {
+  outline: none;
 }
 
 ::placeholder {
-    color: var(--cor-texto-entrada);
+  color: var(--cor-texto-entrada);
 }
 
-textarea:focus {
-    outline: none;
+.alerta {
+  color: var(--cor-mensagem);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Disposição dos Botões */
+.entrada {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  width: 100%;
 }
 
 button {
-    border: 1px solid var(--cor-botao-primaria);
-    border-radius: 1.5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    height: 3.5rem;
-    width: 20rem;
+  border: 1px solid var(--cor-botao-primaria);
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  height: 3.5rem;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: lawngreen;
-    color: var(--cor-texto-saida);
-    transform: scale(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-criptografar {
-    background-color: var(--cor-botao-primaria);
-    color: var(--cor-botao-secundaria);
+  background-color: var(--cor-botao-primaria);
+  color: var(--cor-texto-saida);
+}
+
+.btn-criptografar:hover {
+  background-color: var(--cor-botao-hover);
 }
 
 .btn-decriptografar {
-    background: var(--cor-botao-secundaria);
-    color: var(--cor-botao-primaria);
-    margin-left: 1.8rem;
+  background: var(--cor-botao-secundaria);
+  color: var(--cor-botao-primaria);
 }
 
+.btn-limpar {
+  background: transparent;
+  color: var(--cor-botao-primaria);
+  border: 1px solid var(--cor-botao-secundaria);
+}
+
+.btn-limpar:hover {
+  background-color: #e2e8f0;
+}
+
+/* Seção de Saída */
 .sessao-saida {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 7rem;
-    background-color: var(--cor-texto-saida);
-    border-radius: 2rem;
-    width: 18rem;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--cor-texto-saida);
+  border-radius: 2rem;
+  width: 400px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.sessao-saida>div>img {
-    width: 75%;
+.retorno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
 }
 
-.btn-copiar {
-    background: var(--cor-botao-secundaria);
-    color: var(--cor-botao-primaria);
-    width: 15rem;
-    display: none;
+.retorno img {
+  max-width: 100%;
+  height: auto;
 }
 
 .retorno textarea {
-    background-color: var(--cor-texto-saida);
-    width: 17.5rem;
-    height: 19.5rem;
-    border-radius: 1.3rem;
-    text-align: center;
-    padding-top: 2rem;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: none;
+  background: transparent;
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-mensagem);
+  font-size: 1rem;
+  resize: none;
 }
 
-.credito {
-    margin-top: 3rem;
-    width: 100%;
-    padding: 1rem 0;
-    color: var(--cor-mensagem);
-    background-color: var(--cor-botao-secundaria);
+.btn-copiar {
+  background: var(--cor-botao-secundaria);
+  color: var(--cor-botao-primaria);
+  margin-top: 1rem;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: var(--cor-botao-primaria);
+  color: #ffffff;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
 }
 
 .credito-mensagem {
-    display: flex;
-    max-width: 80rem;
-    margin: 0 auto;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    padding: 1rem;
-}
-
-.credito-mensagem>small {
-    font-size: 1.1rem;
-    display: inline;
-    white-space: nowrap;
-}
-
-.redes-sociais {
-    display: flex;
-    gap: 0.5rem;
-    margin: 0 auto;
-}
-
-.redes-sociais-links {
-    display: inline-flex;
-    gap: 0.5rem;
-    align-items: center;
-}
-
-.redes-sociais-links img {
-    width: 1.5rem;
-    height: 1.5rem;
-    transition: all 0.2s ease-in-out;
-}
-
-.redes-sociais-links img:hover {
-    transform: scale(1.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .redes-sociais-links ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
 }
 
-.credito-mensagem {
-    display: flex;
+.redes-sociais-links img {
+  width: 1.5rem;
+  filter: invert(1);
+  transition: transform 0.2s;
+}
+
+.redes-sociais-links img:hover {
+  transform: scale(1.2);
+}
+
+/* Breakpoints para Responsividade */
+
+/* Tablets / Telas Médias */
+@media (max-width: 992px) {
+  main {
     flex-direction: column;
-    justify-content: center;
+    margin: 1rem auto;
+  }
+
+  .sessao-saida {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .inputText {
+    height: 30vh;
+  }
 }
 
-@media (max-width: 1200px) {
+/* Dispositivos Móveis */
+@media (max-width: 576px) {
+  header {
+    padding: 1rem;
+  }
 
-    .logotipo {
-        margin-left: 1rem;
-        padding-top: 1.25rem;
-        padding-bottom: 1rem;
-    }
+  .entrada {
+    grid-template-columns: 1fr;
+  }
 
-    main,
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 1rem 2rem;
-        gap: 3.5rem;
-    }
-
-    textarea {
-        font-size: 0.6rem;
-        width: 13rem;
-    }
-
-    .sessao-entrada,
-    .entrada {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    button {
-        height: 2.5rem;
-        width: 15rem;
-        font-size: 1.2rem;
-        margin-top: 1.5rem;
-    }
-
-    .btn-criptografar {
-        margin-left: 1rem;
-    }
-
-    .sessao-saida {
-        width: 15rem;
-        height: 25rem;
-    }
-
-    .retorno textarea {
-        width: 14.5rem;
-        height: 10rem;
-    }
-
-    .btn-copiar {
-        width: 12rem;
-    }
+  .credito-mensagem {
+    flex-direction: column;
+    text-align: center;
+  }
 }
