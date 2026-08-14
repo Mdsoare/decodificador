@@ -75,3 +75,36 @@ function displayOutput(outputText) {
     }
   };
 }
+
+function clearAll() {
+  // 1. Limpa a entrada de texto
+  const inputArea = document.querySelector(".inputText");
+  inputArea.value = "";
+
+  // 2. Oculta o botão de copiar
+  const copyButton = document.querySelector(".btn-copiar");
+  copyButton.style.display = "none";
+
+  // 3. Restaura o estado padrão da seção de retorno
+  const outputSection = document.querySelector(".retorno");
+  outputSection.replaceChildren();
+
+  const img = document.createElement("img");
+  img.className = "mensagem";
+  img.src = "./assets/img/avatar.svg";
+  img.alt = "Imagem de um boneco com uma lupa sobre um diamante";
+  img.title = "Avatar";
+
+  const h3 = document.createElement("h3");
+  h3.className = "mensagem";
+  h3.textContent = "Nenhuma mensagem encontrada";
+
+  const p = document.createElement("p");
+  p.className = "mensagem";
+  p.textContent =
+    "Digite o texto que você deseja criptografar ou decriptografar.";
+
+  outputSection.appendChild(img);
+  outputSection.appendChild(h3);
+  outputSection.appendChild(p);
+}
