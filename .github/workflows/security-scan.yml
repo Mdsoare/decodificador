@@ -2,9 +2,9 @@ name: DevSecOps Security Scan sast and sca
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: ["main", "master"]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: ["main", "master"]
 
 permissions:
   contents: read
@@ -22,7 +22,7 @@ jobs:
       - name: CodeQL Initialization
         uses: github/codeql-action/init@v3
         with:
-          languages: 'javascript-typescript'
+          languages: "javascript-typescript"
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
@@ -36,6 +36,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run OSV-Scanner
-        uses: google/osv-scanner-action@v1.11.0
+        uses: google/osv-scanner-action@v1
         with:
-          scan-args: '--recursive ./'
+          scan-args: "--recursive ./"
