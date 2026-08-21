@@ -9,7 +9,7 @@ const ENCRYPTION_KEYS = {
 // Regex para mapeamento reverso de descriptografia
 const DECRYPTION_REGEX = new RegExp(
   Object.values(ENCRYPTION_KEYS).join("|"),
-  "g"
+  "g",
 );
 
 function validateInput(text) {
@@ -48,8 +48,8 @@ function decrypt() {
     DECRYPTION_REGEX,
     (matched) =>
       Object.keys(ENCRYPTION_KEYS).find(
-        (key) => ENCRYPTION_KEYS[key] === matched
-      ) || matched
+        (key) => ENCRYPTION_KEYS[key] === matched,
+      ) || matched,
   );
 
   displayOutput(decryptedText);
@@ -69,7 +69,9 @@ function displayOutput(outputText) {
   outputSection.appendChild(textarea);
 
   copyButton.style.display = "block";
-  copyButton.onclick = () => handleCopy(outputText, copyButton, textarea);
+  copyButton.addEventListener("click", () =>
+    handleCopy(outputText, copyButton, textarea),
+  );
 }
 
 async function handleCopy(text, button, fallbackTextarea) {
@@ -111,8 +113,20 @@ function clearAll() {
 
   const p = document.createElement("p");
   p.className = "mensagem";
-  p.textContent = "Digite o texto que você deseja criptografar ou decriptografar.";
+  p.textContent =
+    "Digite o texto que você deseja criptografar ou decriptografar.";
 
   fragment.append(img, h3, p);
   outputSection.appendChild(fragment);
 }
+
+// Registro dos Event Listeners no carregamento do DOM
+document.addEventListener("DOMContentLoaded", () => {
+  const btnEncrypt = document.querySelector(".btn-criptografar");
+  const btnDecrypt = document.querySelector(".btn-decriptografar");
+  const btnClear = document.querySelector(".btn-limpar");
+
+  if (btnEncrypt) btnEncrypt.addEventListener("click", encrypt);
+  if (btnDecrypt) btnDecrypt.addEventListener("click", decrypt);
+  if (btnClear) btnClear.addEventListener("click", clearAll);
+});
