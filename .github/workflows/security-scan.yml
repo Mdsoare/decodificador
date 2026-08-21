@@ -146,7 +146,7 @@ jobs:
 
       - name: Check for Unauthorized External Scripts and Styles
         run: |
-          UNAUTHORIZED_RESOURCES=$(grep -Ei 'src=.*http|href=.*http' index.html || true)
+          UNAUTHORIZED_RESOURCES=$(grep -Ei '<script.*src=["'\''"]?http|<link.*href=["'\''"]?http' index.html || true)
 
           if [ -n "$UNAUTHORIZED_RESOURCES" ]; then
             echo "❌ ERRO: Encontrados scripts ou estilos externos não autorizados no index.html:"
