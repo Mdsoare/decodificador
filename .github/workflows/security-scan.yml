@@ -146,14 +146,14 @@ jobs:
 
       - name: Check for Unauthorized External Scripts and Styles
         run: |
-          UNAUTHORIZED_RESOURCES=$(grep -E '<script.*src=|<link.*rel="stylesheet"' index.html \
-            | grep -v 'fonts.googleapis.com' \
-            | grep -v 'fonts.gstatic.com' || true)
+          UNAUTHORIZED_RESOURCES=$(grep -E 'src=["\']http|href=["\']http' index.html)
 
           if [ -n "$UNAUTHORIZED_RESOURCES" ]; then
             echo "❌ ERRO: Encontrados scripts ou estilos externos não autorizados no index.html:"
             echo "$UNAUTHORIZED_RESOURCES"
             exit 1
+          else
+            echo "✅ Nenhum recurso externo não autorizado foi detectado."
           fi
 
       - name: Validar estrutura de arquivos obrigatórios
