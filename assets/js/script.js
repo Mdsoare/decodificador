@@ -21,7 +21,7 @@ function getInputValue() {
   const value = inputElement ? inputElement.value : '';
 
   if (!validateInput(value)) {
-    alert('Por favor, digite apenas letras minúsculas e sem acento.');
+    displayOutput('Por favor, digite apenas letras minúsculas e sem acento.');
     return null;
   }
 
