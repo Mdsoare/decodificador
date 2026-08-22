@@ -1,100 +1,82 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Security Headers Emulados via Meta Tags -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self';"
-    />
-    <meta http-equiv="X-Frame-Options" content="DENY" />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
-    <title>Decodificador de Textos</title>
-  </head>
+  <!-- Content Security Policy (CSP) Ajustado -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; form-action 'none'; base-uri 'self';" />
 
-  <body>
-    <header>
-      <a
-        href="https://cursos.alura.com.br/dashboard"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          class="logotipo"
-          src="./assets/img/logo.svg"
-          alt="Imagem do logo da Alura"
-          title="Acesse o site da Alura"
-        />
-      </a>
-    </header>
+  <!-- Outros Cabeçalhos de Segurança via Meta Tags -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()" />
 
-    <main>
-      <section class="sessao-entrada">
-        <textarea class="input-text" placeholder="Digite seu texto"></textarea>
-        <h6 class="alerta">! Apenas letras minúsculas e sem acento.</h6>
-        <div class="entrada">
-          <button class="btn-criptografar">Criptografar</button>
-          <button class="btn-decriptografar">Decriptografar</button>
-          <button class="btn-limpar">Limpar</button>
-        </div>
-      </section>
+  <!-- Estilos e Título -->
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+  <title>Decodificador de Textos</title>
+</head>
 
-      <section class="sessao-saida">
-        <div class="retorno">
-          <img
-            class="mensagem"
-            src="./assets/img/avatar.svg"
-            alt="Imagem de um boneco com uma lupa sobre um diamante"
-            title="Avatar"
-          />
-          <h3 class="mensagem">Nenhuma mensagem encontrada</h3>
-          <p class="mensagem">
-            Digite o texto que você deseja criptografar ou decriptografar.
-          </p>
-        </div>
-        <button class="btn-copiar" style="display: none">Copiar</button>
-      </section>
-    </main>
+<body>
+  <header>
+    <a href="https://cursos.alura.com.br/dashboard" target="_blank" rel="noopener noreferrer">
+      <img class="logotipo" src="./assets/img/logo.svg" alt="Imagem do logo da Alura" title="Acesse o site da Alura" />
+    </a>
+  </header>
 
-    <script src="./assets/js/script.js"></script>
+  <main>
+    <section class="sessao-entrada">
+      <textarea class="input-text" placeholder="Digite seu texto"></textarea>
+      <h6 class="alerta">! Apenas letras minúsculas e sem acento.</h6>
+      <div class="entrada">
+        <button class="btn-criptografar">Criptografar</button>
+        <button class="btn-decriptografar">Decriptografar</button>
+        <button class="btn-limpar">Limpar</button>
+      </div>
+    </section>
 
-    <footer class="rodape">
-      <div class="credito">
-        <div class="credito-mensagem">
-          <small>🕶 Desenvolvido por Marcelo Soares ™.</small>
-          <div class="redes-sociais">
-            <div class="redes-sociais-links">
-              <ul>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/marcelodsoares/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Acesse meu LinkedIn"
-                  >
-                    <img src="assets/img/linkedin.svg" alt="LinkedIn" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/Mdsoare"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Acesse meu GitHub"
-                  >
-                    <img src="assets/img/github.svg" alt="GitHub" />
-                  </a>
-                </li>
-              </ul>
-            </div>
+    <section class="sessao-saida">
+      <div class="retorno">
+        <img class="mensagem" src="./assets/img/avatar.svg" alt="Imagem de um boneco com uma lupa sobre um diamante"
+          title="Avatar" />
+        <h3 class="mensagem">Nenhuma mensagem encontrada</h3>
+        <p class="mensagem">
+          Digite o texto que você deseja criptografar ou decriptografar.
+        </p>
+      </div>
+      <button class="btn-copiar" style="display: none">Copiar</button>
+    </section>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+
+  <footer class="rodape">
+    <div class="credito">
+      <div class="credito-mensagem">
+        <small>🕶 Desenvolvido por Marcelo Soares ™.</small>
+        <div class="redes-sociais">
+          <div class="redes-sociais-links">
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/in/marcelodsoares/" target="_blank" rel="noopener noreferrer"
+                  title="Acesse meu LinkedIn">
+                  <img src="assets/img/linkedin.svg" alt="LinkedIn" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Mdsoare" target="_blank" rel="noopener noreferrer"
+                  title="Acesse meu GitHub">
+                  <img src="assets/img/github.svg" alt="GitHub" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
