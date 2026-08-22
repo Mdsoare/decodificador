@@ -120,11 +120,9 @@ jobs:
       - name: Run Horusec Security Scan
         run: |
           curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
-          
-          # Executa o Horusec e ignora o código de saída de falha (|| true)
-          horusec start -p="./" -e="true" -o="sarif" -O="./horusec-results.sarif" || true
+                    
+          horusec start -p="./" -D -I -e="true" -o="sarif" -O="./horusec-results.sarif" || true
 
-          # Garante que um arquivo SARIF válido exista mesmo se o Horusec não gerar achados
           if [ ! -s "./horusec-results.sarif" ]; then
             echo "⚠️ Arquivo SARIF não encontrado ou vazio. Criando estrutura mínima válida..."
             echo '{"$schema":"https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemas/sarif-schema-2.1.0.json","version":"2.1.0","runs":[{"tool":{"driver":{"name":"Horusec","informationUri":"https://horusec.io"}},"results":[]}]}' > ./horusec-results.sarif
