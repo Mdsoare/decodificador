@@ -9,7 +9,6 @@ on:
 permissions:
   contents: read
   security-events: write
-  actions: write
 
 jobs:
   # -------------------------------------------------------------
@@ -55,6 +54,7 @@ jobs:
       - name: Executar Nuclei Scan
         uses: projectdiscovery/nuclei-action@cc153d0541e1adf8a42bbe31c0a4fb2376147538
         with:
+          cache: false
           args: "-u https://mdsoare.github.io/decodificador/ -sarif-export nuclei.sarif"
 
       - name: Tratar Arquivo SARIF Ausente ou Vazio
