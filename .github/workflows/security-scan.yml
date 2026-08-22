@@ -119,8 +119,14 @@ jobs:
 
       - name: Run Horusec Security Scan
         run: |
-          curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
-                    
+          # Baixa o script de instalação para um arquivo temporário sem executar via pipe
+          curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh -o install_horusec.sh
+          
+          # Executa o script de forma isolada
+          bash install_horusec.sh latest
+          rm -f install_horusec.sh
+          
+          # Executa a análise SAST
           horusec start -p="./" -D -I -e="true" -o="sarif" -O="./horusec-results.sarif" || true
 
           if [ ! -s "./horusec-results.sarif" ]; then
