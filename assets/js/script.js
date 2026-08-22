@@ -83,7 +83,7 @@ async function handleCopy(text, button, fallbackTextarea) {
       button.textContent = originalText;
     }, 2000);
   } catch (err) {
-    console.error('Falha ao copiar o texto: ', err);
+    // Removido a escrita do objeto de erro no console para sanar o CWE-532
     fallbackTextarea.select();
   }
 }
