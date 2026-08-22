@@ -3,5 +3,11 @@
   "ignoreRules": [
     "HS-LEAKS-9",
     "HS-JAVASCRIPT-11"
-  ]
+  ],
+  "rules": {
+    "ignore": [
+      "HS-LEAKS-9",
+      "HS-JAVASCRIPT-11"
+    ]
+  }
 }
