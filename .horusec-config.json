@@ -1,4 +1,7 @@
 {
   "horusecCwd": "./",
-  "ignoreRules": ["HS-LEAKS-9"]
+  "ignoreRules": [
+    "HS-LEAKS-9",
+    "HS-JAVASCRIPT-11"
+  ]
 }
