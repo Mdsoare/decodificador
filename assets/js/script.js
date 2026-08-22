@@ -1,15 +1,15 @@
 const ENCRYPTION_KEYS = {
-  e: "enter",
-  i: "imes",
-  a: "ai",
-  o: "ober",
-  u: "ufat",
+  e: 'enter',
+  i: 'imes',
+  a: 'ai',
+  o: 'ober',
+  u: 'ufat',
 };
 
 // Regex para mapeamento reverso de descriptografia
 const DECRYPTION_REGEX = new RegExp(
-  Object.values(ENCRYPTION_KEYS).join("|"),
-  "g",
+  Object.values(ENCRYPTION_KEYS).join('|'),
+  'g',
 );
 
 function validateInput(text) {
@@ -17,11 +17,11 @@ function validateInput(text) {
 }
 
 function getInputValue() {
-  const inputElement = document.querySelector(".input-text");
-  const value = inputElement ? inputElement.value : "";
+  const inputElement = document.querySelector('.input-text');
+  const value = inputElement ? inputElement.value : '';
 
   if (!validateInput(value)) {
-    alert("Por favor, digite apenas letras minúsculas e sem acento.");
+    alert('Por favor, digite apenas letras minúsculas e sem acento.');
     return null;
   }
 
@@ -33,9 +33,9 @@ function encrypt() {
   if (inputText === null) return;
 
   const encryptedText = inputText
-    .split("")
+    .split('')
     .map((char) => ENCRYPTION_KEYS[char] || char)
-    .join("");
+    .join('');
 
   displayOutput(encryptedText);
 }
@@ -56,20 +56,20 @@ function decrypt() {
 }
 
 function displayOutput(outputText) {
-  const outputSection = document.querySelector(".retorno");
-  const copyButton = document.querySelector(".btn-copiar");
+  const outputSection = document.querySelector('.retorno');
+  const copyButton = document.querySelector('.btn-copiar');
 
   if (!outputSection || !copyButton) return;
 
   outputSection.replaceChildren();
 
-  const textarea = document.createElement("textarea");
+  const textarea = document.createElement('textarea');
   textarea.value = outputText;
   textarea.readOnly = true;
   outputSection.appendChild(textarea);
 
-  copyButton.style.display = "block";
-  copyButton.addEventListener("click", () =>
+  copyButton.style.display = 'block';
+  copyButton.addEventListener('click', () =>
     handleCopy(outputText, copyButton, textarea),
   );
 }
@@ -78,55 +78,55 @@ async function handleCopy(text, button, fallbackTextarea) {
   try {
     await navigator.clipboard.writeText(text);
     const originalText = button.textContent;
-    button.textContent = "Copiado!";
+    button.textContent = 'Copiado!';
     setTimeout(() => {
       button.textContent = originalText;
     }, 2000);
   } catch (err) {
-    console.error("Falha ao copiar o texto: ", err);
+    console.error('Falha ao copiar o texto: ', err);
     fallbackTextarea.select();
   }
 }
 
 function clearAll() {
-  const inputArea = document.querySelector(".input-text");
-  const copyButton = document.querySelector(".btn-copiar");
-  const outputSection = document.querySelector(".retorno");
+  const inputArea = document.querySelector('.input-text');
+  const copyButton = document.querySelector('.btn-copiar');
+  const outputSection = document.querySelector('.retorno');
 
-  if (inputArea) inputArea.value = "";
-  if (copyButton) copyButton.style.display = "none";
+  if (inputArea) inputArea.value = '';
+  if (copyButton) copyButton.style.display = 'none';
   if (!outputSection) return;
 
   outputSection.replaceChildren();
 
   const fragment = document.createDocumentFragment();
 
-  const img = document.createElement("img");
-  img.className = "mensagem";
-  img.src = "./assets/img/avatar.svg";
-  img.alt = "Imagem de um boneco com uma lupa sobre um diamante";
-  img.title = "Avatar";
+  const img = document.createElement('img');
+  img.className = 'mensagem';
+  img.src = './assets/img/avatar.svg';
+  img.alt = 'Imagem de um boneco com uma lupa sobre um diamante';
+  img.title = 'Avatar';
 
-  const h3 = document.createElement("h3");
-  h3.className = "mensagem";
-  h3.textContent = "Nenhuma mensagem encontrada";
+  const h3 = document.createElement('h3');
+  h3.className = 'mensagem';
+  h3.textContent = 'Nenhuma mensagem encontrada';
 
-  const p = document.createElement("p");
-  p.className = "mensagem";
+  const p = document.createElement('p');
+  p.className = 'mensagem';
   p.textContent =
-    "Digite o texto que você deseja criptografar ou decriptografar.";
+    'Digite o texto que você deseja criptografar ou decriptografar.';
 
   fragment.append(img, h3, p);
   outputSection.appendChild(fragment);
 }
 
 // Registro dos Event Listeners no carregamento do DOM
-document.addEventListener("DOMContentLoaded", () => {
-  const btnEncrypt = document.querySelector(".btn-criptografar");
-  const btnDecrypt = document.querySelector(".btn-decriptografar");
-  const btnClear = document.querySelector(".btn-limpar");
+document.addEventListener('DOMContentLoaded', () => {
+  const btnEncrypt = document.querySelector('.btn-criptografar');
+  const btnDecrypt = document.querySelector('.btn-decriptografar');
+  const btnClear = document.querySelector('.btn-limpar');
 
-  if (btnEncrypt) btnEncrypt.addEventListener("click", encrypt);
-  if (btnDecrypt) btnDecrypt.addEventListener("click", decrypt);
-  if (btnClear) btnClear.addEventListener("click", clearAll);
+  if (btnEncrypt) btnEncrypt.addEventListener('click', encrypt);
+  if (btnDecrypt) btnDecrypt.addEventListener('click', decrypt);
+  if (btnClear) btnClear.addEventListener('click', clearAll);
 });
