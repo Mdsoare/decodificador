@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
+@charset "UTF-8";
 
 :root {
   --cor-fundo: #f3f5fc;
@@ -8,8 +8,12 @@
   --cor-botao-primaria: #0a3871;
   --cor-botao-secundaria: #d8dfe8;
   --cor-botao-hover: #072b57;
-  --fonte-primaria: "Montserrat", sans-serif;
-  --fonte-secundaria: "Krona One", sans-serif;
+  --font-sans:
+    system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen,
+    ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  --font-mono:
+    ui-monospace, sfmono-regular, "SF Mono", consolas, "Liberation Mono", menlo,
+    monospace;
 }
 
 * {
@@ -20,7 +24,7 @@
 
 body {
   background-color: var(--cor-fundo);
-  font-family: var(--fonte-primaria);
+  font-family: var(--font-sans);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -68,7 +72,7 @@ main {
   border: none;
   background-color: transparent;
   color: var(--cor-texto-entrada);
-  font-family: var(--fonte-secundaria);
+  font-family: var(--font-mono);
   font-size: 1.25rem;
   resize: none;
 }
@@ -170,7 +174,7 @@ button:hover {
   min-height: 300px;
   border: none;
   background: transparent;
-  font-family: var(--fonte-secundaria);
+  font-family: var(--font-mono);
   color: var(--cor-mensagem);
   font-size: 1rem;
   resize: none;

@@ -1,5 +1,29 @@
 # Challenge - Decodificador de Textos 
 
+<!-- Status do Pipeline e Segurança -->
+<!-- Badges do Topo -->
+
+[![CI Pipeline](https://github.com/Mdsoare/decodificador/actions/workflows/security-scan.yml/badge.svg)](https://github.com/Mdsoare/decodificador/actions/workflows/security-scan.yml)
+[![Security Rating](https://img.shields.io/badge/Security-DevSecOps%20Hardened-green?style=flat&logo=github)](https://github.com/Mdsoare/decodificador/security/code-scanning)
+![Security: CSP Compliant](https://img.shields.io/badge/Security-CSP--Compliant-success.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+
+---
+
+<!-- Tech Stack & DevSecOps Ecosystem -->
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
+![Dependabot](https://img.shields.io/badge/Dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
+![SAST & SCA](https://img.shields.io/badge/DevSecOps-SAST%20%26%20SCA-red?style=for-the-badge&logo=shield&logoColor=white)
+
+---
+
 | Alura | Oracle |
 | ----- | ------ |
 | <img src=./assets/img/logo.svg alt="Logotipo da Alura" title="Logo da Alura"> | <img src=./assets/img/logo-one.webp alt="Logotipo da ONE" title="Logo da ONE"> |
@@ -7,6 +31,8 @@
 <br>
 
 Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto-alura-challenges-oracle-one) e o [Figma](https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?type=design&node-id=0-1&mode=design&t=B6ZgXYblW4880u2K-0) disponibilizados pela Alura, deve ser criada uma aplicação que criptografa textos. 
+
+---
 
 **Requisitos:**
 
@@ -23,6 +49,8 @@ Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto
     - A letra **"a"** é convertida para **"ai"**
     - A letra **"u"** é convertida para **"ufat"**
 
+---
+
 **Extras:**
 
 - Um botão que copie o texto criptografado/descriptografado para a área de transferência - ou seja, que tenha a mesma funcionalidade do **ctrl+C** ou da opção **"copiar"** do menu dos aplicativos.
@@ -35,6 +63,8 @@ Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto
 
 **NOTA**: O Trello é uma ferramenta de uso individual para controlar o andamento das atividades, mas ela não será avaliada.
 
+---
+
 <br>
 
 ## O Front-End seguindo o [Figma](https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?type=design&node-id=0-1&mode=design&t=B6ZgXYblW4880u2K-0):
@@ -42,6 +72,8 @@ Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto
 <br>
 
 **Nota:** Apesar da disponibilização do modelo no Figma, **não era requisito seguí-lo à risca** (dito inclusive na [Live ONE T6](https://www.youtube.com/watch?v=XlfNkUeHYgE)), sendo considerado apenas um **"Norte"**. Com isso, acrescentei algumas coisas. Segue:   
+
+---
 
 ### No **index.html**:
 
@@ -56,11 +88,15 @@ Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto
 - **restrições** : texto a ser inserido deve conter apenas **letras minúsculas** e **sem acentos** ou **caracteres especiais**, mas deixei ser inserido o **"ç"**.
 -  Incluí um rodapé, com os links do GitHub e LinkedIn.
 
+---
+
 ### No **style.css**:
 
 - O botão de copiar fica oculto de início, até que seja exibibo (com JavaScript) na saída junto com texto de saída; 
 - Incluí responsividade ao dimencionar a tela a partir de 1200px;
 - Usei as fontes **Montserrat** e **Krona One** do **Google Fonts**.
+
+---
 
 ### No **script.js**:
 
@@ -71,9 +107,13 @@ Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto
 
 <br>
 
+---
+
 ## Publicar solução:
 
 #### Conforme informado no [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto-alura-challenges-oracle-one), a solução deve ser disponibilizada no site do [Challenge](https://lp.alura.com.br/alura-latam-entrega-challenge-one-portugues). Lá deverá ser incluído o link gerado no **GitHub Pages**. 
+
+---
 
 ##### Passo-a-passo para gerar a página do repositório:
 
@@ -86,6 +126,8 @@ Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto
 - Agora é só clicar em [**Visit Site**](https://mdsoare.github.io/decodificador/) para ver a página publicada;
 
 <br>
+
+---
 
 ## Redes Socias
 
@@ -109,6 +151,18 @@ Usando como base o [Trello](https://trello.com/b/EmUFmjCv/decodificador-de-texto
 </table>
 
 <br>
+
+---
+
+## 🛠️ Tecnologias & Ecossistema DevSecOps
+
+- **Frontend:** HTML5, Pure CSS3 (Dark Theme) e Vanilla JavaScript (ES6+ sem dependências de runtime).
+- **Gerenciamento & Pacotes:** Node.js & npm (DevDependencies e Scripts de Linting/Auditoria).
+- **Automação & CI/CD:** GitHub Actions & GitHub Dependabot.
+- **Segurança Estática (SAST):** CodeQL, Horusec, Semgrep, ESLint (Flat Config), Stylelint, HTMLHint e TruffleHog (Secret Scanning).
+- **Análise de Dependências & Misconfig (SCA):** OSV-Scanner, Trivy Scan e `npm audit`.
+
+---
 
 ## Referências 🔎
 
