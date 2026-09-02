@@ -1,4 +1,4 @@
-# Challenge - Decodificador de Textos 
+# Challenge - Decodificador de Textos
 
 <!-- Badges do Topo -->
 [![CI Pipeline](https://github.com/Mdsoare/decodificador/actions/workflows/security-scan.yml/badge.svg)](https://github.com/Mdsoare/decodificador/actions/workflows/security-scan.yml)
@@ -33,7 +33,7 @@ O **Challenge ONE - Oracle Next Education** é um desafio proposto para criar um
 
 ---
 
-### 📋 Especificações das Regras de Negócio
+## 📋 Especificações das Regras de Negócio
 
 - Funcionar apenas com letras minúsculas;
 - Não aceitar caracteres especiais ou acentuação;
@@ -66,7 +66,7 @@ O **Challenge ONE - Oracle Next Education** é um desafio proposto para criar um
 
 [![DIO](https://img.shields.io/badge/DIO-1F2A44?style=for-the-badge&logo=dio&logoColor=white)](https://web.dio.me/users/marcelo_soares92)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mdsoare/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcelodsoares/) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcelodsoares/)
 
 <br>
 
